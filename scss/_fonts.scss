@@ -1,0 +1,70 @@
+/*----------------------------- Подключение шрифтов -----------------------------*/
+
+
+/*--- Geometria-Regular ---*/
+
+@font-face {
+    font-family: 'Geometria';
+    src: url('../fonts/Geometria.eot');
+    src: local('☺'), url('../fonts/Geometria.woff') format('woff'), url('../fonts/Geometria.ttf') format('truetype'), url('../fonts/Geometria.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*--- Geometria-Light ---*/
+
+@font-face {
+    font-family: 'Geometria';
+    src: url('../fonts/Geometria-Light.eot');
+    src: local('☺'), url('../fonts/Geometria-Light.woff') format('woff'), url('../fonts/Geometria-Light.ttf') format('truetype'), url('../fonts/Geometria-Light.svg') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+/*--- Geometria-Medium ---*/
+
+@font-face {
+    font-family: 'Geometria';
+    src: url('../fonts/Geometria-Medium.eot');
+    src: local('☺'), url('../fonts/Geometria-Medium.woff') format('woff'), url('../fonts/Geometria-Medium.ttf') format('truetype'), url('../fonts/Geometria-Medium.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+/*--- Geometria-Bold ---*/
+
+@font-face {
+    font-family: 'Geometria';
+    src: url('../fonts/Geometria-Bold.eot');
+    src: local('☺'), url('../fonts/Geometria-Bold.woff') format('woff'), url('../fonts/Geometria-Bold.ttf') format('truetype'), url('../fonts/Geometria-Bold.svg') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/*--- Geometria-ExtaBold ---*/
+
+@font-face {
+    font-family: 'Geometria';
+    src: url('../fonts/Geometria-ExtaBold.eot');
+    src: local('☺'), url('../fonts/Geometria-ExtaBold.woff') format('woff'), url('../fonts/Geometria-ExtaBold.ttf') format('truetype'), url('../fonts/Geometria-ExtaBold.svg') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+/*--- Geometria-Heavy ---*/
+
+@font-face {
+    font-family: 'Geometria';
+    src: url('../fonts/Geometria-Heavy.eot');
+    src: local('☺'), url('../fonts/Geometria-Heavy.woff') format('woff'), url('../fonts/Geometria-Heavy.ttf') format('truetype'), url('../fonts/Geometria-Heavy.svg') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+/*----------------------------- Конец подключения шрифтов -----------------------------*/
