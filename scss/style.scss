@@ -106,6 +106,11 @@ body {
         border: 1px solid #2A94E2;
         white-space: nowrap;
         color: #000;
+        transition: all .2s ease-out;
+        &:hover {
+            background-color: #2A94E2;
+            color: #fff;
+        }
     }
 }
 
@@ -260,6 +265,10 @@ body {
         background-color: #2A94E2;
         border-radius: 5px;
         white-space: nowrap;
+        transition: all .2s ease-out;
+        &:hover {
+            background-color: rgb(24, 212, 165);
+        }
     }
     & a {
         color: #fff;
@@ -349,26 +358,47 @@ body {
     &__question-text {
         @include text_style (16px, (26/16)*100%);
     }
+    &__question-button {
+        &:hover .test__button {
+            color: rgb(24, 212, 165);
+        }
+        &:hover .test__button span {
+            background: rgb(24, 212, 165);
+        }
+        &:hover .test__button span:nth-child(2) {
+            transform: translateX(8px);
+        }
+        &:hover .test__button span:nth-child(1) {
+            transform: rotate(45deg) translate(11px, -17px);
+        }
+        &:hover .test__button span:nth-child(3) {
+            transform: rotate(-45deg) translate(11px, 17px);
+        }
+    }
     &__button {
         @include text_style (16px, (26/16)*100%);
         color: #2A94E2;
         position: relative;
         margin-right: 41px;
+        transition: all .3s ease-out;
         & span {
-            margin-left: 15px;
+            margin-left: 10px;
             position: absolute;
             background-color: #2A94E2;
             top: 50%;
             width: 22px;
             height: 1px;
+            transition: all .3s ease-out;
         }
         & span:nth-child(1) {
             transform: rotate(45deg) translate(7px, -12px);
             width: 11px;
+            transition: all .3s ease-out;
         }
         & span:nth-child(3) {
             transform: rotate(-45deg) translate(7px, 12px);
             width: 11px;
+            transition: all .3s ease-out;
         }
     }
     &__right-block {
@@ -474,6 +504,11 @@ body {
         padding: 18px 105px;
         background-color: #2A94E2;
         border-radius: 5px;
+        transition: all .3s ease-out;
+        &:hover {
+            background: #fff;
+            color: #000;
+        }
     }
 }
 
@@ -514,38 +549,39 @@ body {
         margin-bottom: 40px;
     }
     &__showmore-button {
-        cursor: pointer;
+        @include text_style (16px, (26/16)*100%);
         max-width: 100%;
         width: 100%;
-        @include text_style (16px, (26/16)*100%);
         font-weight: 400;
         text-align: center;
         background: rgba(246, 246, 246, .5);
         padding: 17px 0;
-        & a {
-            position: relative;
-            padding-right: 25px;
-            &::before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                right: 0;
-                width: 10px;
-                height: 1px;
-                background-color: #000;
-                transform: rotate(-45deg) translate(4.5px, 4.5px);
-                // transform: rotate(-45deg) translate(-5.3px, -4.5px);
-            }
-            &::after {
-                content: '';
-                position: absolute;
-                top: 50%;
-                right: 0;
-                width: 10px;
-                height: 1px;
-                background-color: #000;
-                transform: rotate(45deg);
-            }
+        display: block;
+        position: relative;
+        transition: all .3s ease-out;
+        &:hover {
+            background: rgb(233, 231, 231);
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 43.5%;
+            width: 10px;
+            height: 1px;
+            background-color: #000;
+            transform: rotate(-45deg) translate(4.5px, 4.5px);
+            // transform: rotate(-45deg) translate(-5.3px, -4.5px);
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 43.5%;
+            width: 10px;
+            height: 1px;
+            background-color: #000;
+            transform: rotate(45deg);
         }
     }
 }
@@ -700,6 +736,7 @@ body {
     }
     &__button {
         @include text_style (20px, (30/20)*100%);
+        display: block;
         margin-top: 20px;
         text-align: center;
         font-weight: 500;
@@ -708,6 +745,10 @@ body {
         width: 280px;
         background-color: #2A94E2;
         border-radius: 5px;
+        transition: all .3s ease-out;
+        &:hover {
+            background: rgb(24, 212, 165);
+        }
     }
     &__right-block {
         max-width: 555px;
@@ -895,6 +936,10 @@ body {
         background-color: #2A94E2;
         border-radius: 5px;
         margin-top: 22px;
+        transition: all .3s ease-out;
+        &:hover {
+            background: rgb(24, 212, 165);
+        }
     }
     &__right-block {
         max-width: 445px;
@@ -969,12 +1014,20 @@ body {
         @include text_style (30px, (49/30)*100%);
         margin-bottom: 20px;
         font-weight: 400;
+        transition: all .3s ease-out;
+        &:hover {
+            color: #2A94E2;
+        }
     }
     &__right-email {
         @include text_style (22px, (17/22)*100%);
         display: inline-block;
         border-bottom: 1px solid rgba(255, 255, 255, 1);
         margin-bottom: 30px;
+        transition: all .3s ease-out;
+        &:hover {
+            border-bottom: 1px solid #2A94E2;
+        }
     }
     &__right-button {
         display: block;
@@ -986,5 +1039,10 @@ body {
         color: #000;
         text-align: center;
         font-weight: 500;
+        transition: all .3s ease-out;
+        &:hover {
+            background: #2A94E2;
+            color: #fff;
+        }
     }
 }
