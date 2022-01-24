@@ -1,7 +1,168 @@
 @charset "UTF-8";
-/*----------------------------- Доработка для маленьких экранов (ноутбуки) -----------------------------*/
-@media screen and (max-width: 940px) {
-  /*----------------------------- Секция about -----------------------------*/
+/*----------------------------- Доработка для маленьких экранов (ноутбуки/планшеты) -----------------------------*/
+@media screen and (max-width: 1146px) {
+  /*===================================== Второй блок тест =====================================*/
+  .test {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: 2px solid #b3b1b1;
+  }
+  .test__left-block {
+    border-right: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+  .test__title {
+    text-align: center;
+  }
+  .test__cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .test__right-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-top: 2px solid #b3b1b1;
+  }
+  .test__complite {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+  .test__complite:last-child {
+    margin-right: 0;
+  }
+  /*===================================== Четвёртый блок, карточки =====================================*/
+  .appartment-block__apps-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 30px 0 0 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .appartment-block__apps-card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    max-width: 800px;
+    margin: 0 0 50px 0;
+  }
+  /*===================================== Пятый блок, Табы =====================================*/
+  .five-section__container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .five-section__left-block {
+    margin-top: 50px;
+    max-width: 750px;
+    min-width: 310px;
+    width: 100%;
+    margin-right: 0;
+  }
+  /*===================================== Шестой блок, Карточки =====================================*/
+  .six-section__cards-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 0;
+  }
+  .six-section__card {
+    max-width: 755px;
+  }
+  .six-section__card-title {
+    max-width: 400px;
+  }
 }
 
-/*----------------------------- Планшеты -----------------------------*/
+/*----------------------------- Доработка мелочей -----------------------------*/
+@media screen and (max-width: 950px) {
+  /*===================================== Второй блок тест =====================================*/
+  .test__right-block {
+    padding: 40px 10px;
+  }
+  .test__complite-img {
+    margin-right: 12px;
+  }
+}
+
+@media screen and (max-width: 1125px) {
+  /*===================================== Седьмой блок картинка =====================================*/
+  .seven-section__content-container {
+    position: relative;
+  }
+  .seven-section__img {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  .seven-section__right-block {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    width: 445px;
+    height: 535px;
+  }
+  .seven-section__left-block {
+    max-width: 660px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /*===================================== Седьмой блок картинка =====================================*/
+  .seven-section__right-block {
+    opacity: .5;
+  }
+  /*===================================== Восьмой блок подвал =====================================*/
+  .eight-section__content-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .eight-section__left {
+    max-width: 550px;
+    min-width: 270px;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-top: 20px;
+  }
+  .eight-section__center {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin: 0;
+    margin-right: 50px;
+  }
+  .eight-section__right {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}

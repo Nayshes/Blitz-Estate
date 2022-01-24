@@ -159,6 +159,10 @@ body {
   font-size: 16px;
 }
 
+body._lock {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1140px;
   width: 100%;
@@ -290,6 +294,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  margin-right: 30px;
 }
 
 .menu__icon {
@@ -358,8 +363,8 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.85);
   padding: 100px 30px 30px 30px;
-  -webkit-transition: top .4s ease-out;
-  transition: top .4s ease-out;
+  -webkit-transition: top .3s ease;
+  transition: top .3s ease;
   text-align: center;
 }
 
@@ -423,6 +428,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-right: 10px;
+}
+
+.preview__card:last-child {
+  margin-right: 0;
 }
 
 .preview__card:nth-child(1) {
@@ -724,8 +734,8 @@ body {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "house money_house invest" "house boat boat" "management management concierge";
-  -ms-grid-columns: (373px)[3];
-      grid-template-columns: repeat(3, 373px);
+  -ms-grid-columns: (min-max(350px, 373px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, min-max(350px, 373px));
   -ms-grid-rows: (300px)[3];
       grid-template-rows: repeat(3, 300px);
 }
@@ -776,12 +786,12 @@ body {
   -webkit-transition: all .3s ease-out 0s;
   transition: all .3s ease-out 0s;
   position: absolute;
-  bottom: -130px;
+  bottom: -166px;
   color: #fff;
 }
 
 .third-section__servis-container._overlay-active {
-  bottom: 35px;
+  bottom: 15px;
 }
 
 .third-section__title-container {
@@ -789,6 +799,10 @@ body {
   line-height: 150%;
   font-weight: 800;
   margin-bottom: 11px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .third-section__subtitle-container {
@@ -797,6 +811,7 @@ body {
   margin-bottom: 50px;
   font-weight: 300;
   max-width: 324px;
+  width: 100%;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -808,11 +823,16 @@ body {
   line-height: 150%;
   font-weight: 400;
   text-align: center;
-  padding: 18px 105px;
+  display: block;
+  min-width: 160px;
+  max-width: 320px;
+  margin-right: 20px;
+  padding: 18px;
   background-color: #2A94E2;
   border-radius: 5px;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
+  white-space: nowrap;
 }
 
 .third-section__button:hover {
@@ -926,6 +946,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: auto;
+  padding-bottom: 10px;
 }
 
 .appartment-block__item {
@@ -940,7 +962,7 @@ body {
   padding: 18px 0;
   background: #fff;
   border: 2px solid #F6F6F6;
-  white-space: nowrap;
+  white-space: normal;
   color: #000;
   border-right: 1px solid #F6F6F6;
   border-left: 1px solid #F6F6F6;
@@ -1148,27 +1170,39 @@ body {
 }
 
 .five-section__right-block {
-  max-width: 555px;
+  max-width: 855px;
   width: 100%;
-}
-
-.five-section__main-img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  height: 100%;
 }
 
 .five-section__slider-main {
   background-color: #000;
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.five-section__main-img {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 450px;
-  overflow: hidden;
-  margin-bottom: 10px;
+}
+
+.five-section__img-vis {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.five-section__img-inv {
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: right .3s ease-out 0s;
+  transition: right .3s ease-out 0s;
 }
 
 .five-section__slider-under {
@@ -1182,7 +1216,6 @@ body {
 
 .five-section__slider-img {
   width: 100%;
-  height: 106px;
 }
 
 .five-section__slider-img:not(:last-child) {
@@ -1190,13 +1223,19 @@ body {
 }
 
 .five-section__slider-img-item {
+  overflow: hidden;
   width: 100%;
   height: 100%;
   cursor: pointer;
+  -webkit-transition: all .2s ease 0s;
+  transition: all .2s ease 0s;
 }
 
 .five-section__slider-img-item:hover {
-  border: 2px solid #2A94E2;
+  -webkit-box-shadow: 0px 0px 1px 2px #2A94E2;
+          box-shadow: 0px 0px 1px 2px #2A94E2;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 /*===================================== Шестой блок  =====================================*/
@@ -1337,6 +1376,15 @@ body {
 .six-section__card-right {
   width: 100%;
   max-width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .six-section__card-img {
@@ -1365,6 +1413,8 @@ body {
 .seven-section__left-block {
   color: #000;
   min-width: 470px;
+  z-index: 2;
+  max-width: 550px;
 }
 
 .seven-section__title {
@@ -1402,7 +1452,7 @@ body {
   color: #fff;
   background-color: #2A94E2;
   border-radius: 5px;
-  margin-top: 22px;
+  margin: 22px 0 40px 0;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
 }
@@ -1414,6 +1464,7 @@ body {
 .seven-section__right-block {
   max-width: 445px;
   width: 100%;
+  z-index: 1;
 }
 
 .seven-section__img {
@@ -1421,6 +1472,8 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
 }
 
 /*===================================== Восьмой блок (подвал) =====================================*/

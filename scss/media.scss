@@ -1,10 +1,141 @@
-/*----------------------------- Доработка для маленьких экранов (ноутбуки) -----------------------------*/
-
-@media screen and (max-width: 940px) {
-    /*----------------------------- Секция about -----------------------------*/
-}
-
-
-/*----------------------------- Планшеты -----------------------------*/
-
-@media screen and (max-width: 768px) {}
+        /*----------------------------- Доработка для маленьких экранов (ноутбуки/планшеты) -----------------------------*/
+        
+        @media screen and (max-width: 1146px) {
+            /*===================================== Второй блок тест =====================================*/
+            .test {
+                align-items: center;
+                flex-direction: column;
+                border: 2px solid rgb(179, 177, 177);
+                &__left-block {
+                    border-right: 0;
+                    max-width: 100%;
+                    width: 100%;
+                }
+                &__title {
+                    text-align: center;
+                }
+                &__cards {
+                    justify-content: center;
+                }
+                &__right-block {
+                    display: flex;
+                    border-top: 2px solid rgb(179, 177, 177);
+                }
+                &__complite {
+                    display: flex;
+                    margin-bottom: 0;
+                    margin-right: 30px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+            /*===================================== Четвёртый блок, карточки =====================================*/
+            .appartment-block {
+                &__apps-list {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 30px 0 0 0;
+                    align-items: center;
+                }
+                &__apps-card {
+                    flex: 1 1 auto;
+                    max-width: 800px;
+                    margin: 0 0 50px 0;
+                }
+            }
+            /*===================================== Пятый блок, Табы =====================================*/
+            .five-section {
+                &__container {
+                    justify-content: center;
+                    flex-direction: column-reverse;
+                }
+                &__left-block {
+                    margin-top: 50px;
+                    max-width: 750px;
+                    min-width: 310px;
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
+            /*===================================== Шестой блок, Карточки =====================================*/
+            .six-section {
+                &__cards-container {
+                    display: flex;
+                    justify-content: center;
+                    margin: 0 0;
+                }
+                &__card {
+                    max-width: 755px;
+                }
+                &__card-title {
+                    max-width: 400px;
+                }
+            }
+        }
+        /*----------------------------- Доработка мелочей -----------------------------*/
+        
+        @media screen and (max-width: 950px) {
+            /*===================================== Второй блок тест =====================================*/
+            .test {
+                &__right-block {
+                    padding: 40px 10px;
+                }
+                &__complite-img {
+                    margin-right: 12px;
+                }
+            }
+        }
+        
+        @media screen and (max-width: 1125px) {
+            /*===================================== Седьмой блок картинка =====================================*/
+            .seven-section {
+                &__content-container {
+                    position: relative;
+                }
+                &__img {
+                    transform: translateY(0px);
+                }
+                &__right-block {
+                    position: absolute;
+                    right: 0;
+                    bottom: -1px;
+                    width: 445px;
+                    height: 535px;
+                }
+                &__left-block {
+                    max-width: 660px;
+                }
+            }
+        }
+        
+        @media screen and (max-width: 900px) {
+            /*===================================== Седьмой блок картинка =====================================*/
+            .seven-section {
+                &__right-block {
+                    opacity: .5;
+                }
+            }
+            /*===================================== Восьмой блок подвал =====================================*/
+            .eight-section {
+                &__content-container {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                }
+                &__left {
+                    max-width: 550px;
+                    min-width: 270px;
+                    order: 3;
+                    margin-top: 20px;
+                }
+                &__center {
+                    order: 1;
+                    margin: 0;
+                    margin-right: 50px;
+                }
+                &__right {
+                    order: 2;
+                }
+            }
+        }
