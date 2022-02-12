@@ -333,9 +333,10 @@ body._lock {
             content: '';
             position: absolute;
             left: 0;
-            top: 216px;
+            top: 75%;
+            z-index: -1;
             background-color: #2A94E2;
-            width: 334px;
+            width: 100%;
             height: 0%;
             border-bottom-left-radius: 25px;
             border-bottom-right-radius: 25px;
@@ -363,9 +364,11 @@ body._lock {
         margin-top: 30px;
         display: flex;
         justify-content: space-between;
+        align-items: center
     }
     &__question-text {
         @include text_style (16px, (26/16)*100%);
+        margin-right: 20px;
     }
     &__question-button {
         &:hover .test__button {
@@ -499,6 +502,7 @@ body._lock {
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
+        padding-right: 20px;
     }
     &__subtitle-container {
         @include text_style (16px, (20/16)*100%);
@@ -576,27 +580,30 @@ body._lock {
         background: rgba(246, 246, 246, .5);
         padding: 17px 0;
         display: block;
-        position: relative;
         transition: all .3s ease-out;
         &:hover {
             background: rgb(233, 231, 231);
         }
-        &::before {
+        & span {
+            position: relative;
+            padding-right: 15px;
+        }
+        & span::before {
             content: '';
             position: absolute;
             top: 50%;
-            right: 43.5%;
+            right: 0;
             width: 10px;
             height: 1px;
             background-color: #000;
             transform: rotate(-45deg) translate(4.5px, 4.5px);
             // transform: rotate(-45deg) translate(-5.3px, -4.5px);
         }
-        &::after {
+        & span::after {
             content: '';
             position: absolute;
             top: 50%;
-            right: 43.5%;
+            right: 0;
             width: 10px;
             height: 1px;
             background-color: #000;

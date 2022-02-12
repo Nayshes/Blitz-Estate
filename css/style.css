@@ -575,9 +575,10 @@ body._lock {
   content: '';
   position: absolute;
   left: 0;
-  top: 216px;
+  top: 75%;
+  z-index: -1;
   background-color: #2A94E2;
-  width: 334px;
+  width: 100%;
   height: 0%;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -620,11 +621,15 @@ body._lock {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .test__question-text {
   font-size: 16px;
   line-height: 162.5%;
+  margin-right: 20px;
 }
 
 .test__question-button:hover .test__button {
@@ -803,6 +808,7 @@ body._lock {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  padding-right: 20px;
 }
 
 .third-section__subtitle-container {
@@ -903,7 +909,6 @@ body._lock {
   background: rgba(246, 246, 246, 0.5);
   padding: 17px 0;
   display: block;
-  position: relative;
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
 }
@@ -912,11 +917,16 @@ body._lock {
   background: #e9e7e7;
 }
 
-.four-section__showmore-button::before {
+.four-section__showmore-button span {
+  position: relative;
+  padding-right: 15px;
+}
+
+.four-section__showmore-button span::before {
   content: '';
   position: absolute;
   top: 50%;
-  right: 43.5%;
+  right: 0;
   width: 10px;
   height: 1px;
   background-color: #000;
@@ -924,11 +934,11 @@ body._lock {
           transform: rotate(-45deg) translate(4.5px, 4.5px);
 }
 
-.four-section__showmore-button::after {
+.four-section__showmore-button span::after {
   content: '';
   position: absolute;
   top: 50%;
-  right: 43.5%;
+  right: 0;
   width: 10px;
   height: 1px;
   background-color: #000;
