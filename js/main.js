@@ -3,13 +3,24 @@
 
 const iconMenu = document.querySelector('.menu__icon');
 const MenuBody = document.querySelector('.menu__body');
+const body = document.querySelector('body');
 if (iconMenu) {
     iconMenu.addEventListener("click", function(e) {
-        document.body.classList.toggle('_lock');
         iconMenu.classList.toggle('_active');
         MenuBody.classList.toggle('_active');
+        iconMenu.style.pointerEvents = "none";
+        setTimeout(function() {
+            iconMenu.style.pointerEvents = "auto";
+        }, 300);
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            document.body.classList.toggle('_lock');
+        } else {
+            document.body.classList.toggle('__lock');
+        }
     });
 }
+
+
 
 // Активация карточки грид при наведении 
 
@@ -75,3 +86,26 @@ if (oaoa >= 100000000) {
 }
 
 console.log(oaoa);
+
+// Слайдер картинок
+
+let allImgSlider = document.querySelectorAll('.five-section__slider-img-item');
+let mainImg = document.querySelector('.five-section__main-img');
+
+if (allImgSlider) {
+    for (let i = 0; i < allImgSlider.length; i++) {
+        let imgSlider = allImgSlider[i];
+
+        imgSlider.addEventListener("click", function(e) {
+
+            for (let i = 0; i < allImgSlider.length; i++) {
+                if (allImgSlider[i].classList.contains('_active')) {
+                    allImgSlider[i].classList.remove('_active');
+                }
+            }
+            mainImg.src = allImgSlider[i].src;
+            allImgSlider[i].classList.add('_active');
+
+        });
+    }
+}
