@@ -215,11 +215,66 @@
 
 @media screen and (max-width: 610px) {
   /*===================================== Первый блок шапка, фон и превью =====================================*/
+  .menu__list {
+    margin-top: 30px;
+  }
+  .ask-page__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 50px;
+  }
   .first-section {
     background: url(../img/header_bg.jpg) top no-repeat;
     min-height: 100%;
     background-size: cover;
     padding-bottom: 80px;
+  }
+  .first-section__apps-page {
+    background: url(../img/backgrounds/header_bg-apps-block5.jpg) left no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    padding-bottom: 80px;
+  }
+  .first-section__invest-house-page {
+    background: url(../img/backgrounds/header_bg-apps-block8.jpg) center no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    padding-bottom: 80px;
+  }
+  .first-section__invest-page {
+    background: url(../img/backgrounds/header_bg-apps-block9.jpg) left no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    padding-bottom: 80px;
+  }
+  .first-section__yacht-page {
+    background: url(../img/backgrounds/header_bg-apps-block10.jpg) right no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    padding-bottom: 80px;
+  }
+  .first-section__trust-page {
+    background: url(../img/backgrounds/header_bg-apps-block12.jpg) center no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    padding-bottom: 80px;
+  }
+  .first-section__concierge-page {
+    background: url(../img/backgrounds/header_bg-apps-block14.jpg) right no-repeat;
+    min-height: 100vh;
+    background-size: cover;
+    padding-bottom: 80px;
+  }
+  .first-section__ask-page {
+    background: #eef3f9;
+    min-height: 100vh;
+    background-size: cover;
+    padding-bottom: 40px;
   }
   .header {
     margin-top: 0;
@@ -242,6 +297,9 @@
     font-size: 20px;
   }
   /*===================================== Второй блок тест =====================================*/
+  .second-section__block-title-apps-page {
+    margin-bottom: 30px;
+  }
   .test__right-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

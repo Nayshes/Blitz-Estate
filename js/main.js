@@ -21,6 +21,38 @@ if (iconMenu) {
 }
 
 
+//Прокрутка при клике 
+
+const menuLinks = document.querySelectorAll('.all__link[data-goto]');
+let pageHeight = window.innerHeight;
+if (menuLinks.length > 0) {
+    menuLinks.forEach(menuLink => {
+        menuLink.addEventListener("click", onMenuLinkClick);
+    });
+
+    function onMenuLinkClick(e) {
+        const menuLink = e.target;
+        if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+            const gotoBlock = document.querySelector(menuLink.dataset.goto);
+            const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY;
+
+            if (iconMenu.classList.contains('_active')) {
+                document.body.classList.remove('_lock');
+                document.body.classList.remove('__lock');
+                iconMenu.classList.remove('_active');
+                MenuBody.classList.remove('_active');
+            }
+
+
+            window.scrollTo({
+                top: gotoBlockValue,
+                behavior: "smooth"
+            });
+            e.preventDefault();
+        }
+    }
+}
+
 
 // Активация карточки грид при наведении 
 
@@ -45,47 +77,23 @@ if (gridCards) {
     }
 }
 
-//Засчитывание ответов на впоросы
+const cardLocate = document.querySelectorAll('.test__card');
+let answer = document.querySelector('.right_answer-question');
+let answerContent = Number(answer.textContent);
 
-const locateR = document.querySelector('.locate_russia');
-const locateE = document.querySelector('.locate_europe');
-
-locateR.addEventListener("click", function(e) {
-    let answer = document.querySelector('.right_answer-question');
-    let answerContent = Number(answer.textContent);
-    if (answerContent <= 0) {
+cardLocate.forEach(item => {
+    item.addEventListener('click', (e) => {
+        cardLocate.forEach(el => {
+            answer.innerHTML = 0;
+            el.classList.remove('active');
+        });
+        item.classList.add('active');
         answer.innerHTML = 1;
-    } else {
-        answer.innerHTML = 0;
-    }
-    e.preventDefault();
-});
+        e.preventDefault();
+    })
 
-locateE.addEventListener("click", function(e) {
-    let answer = document.querySelector('.right_answer-question');
-    let answerContent = Number(answer.textContent);
-    if (answerContent <= 0) {
-        answer.innerHTML = 1;
-    } else {
-        answer.innerHTML = 0;
-    }
-    e.preventDefault();
-});
+})
 
-
-// Фильтрация апартаментов
-
-const oao = document.querySelector('.cost-apps').textContent;
-
-const oaoa = Number(oao.replace(/\s/g, ''));
-
-if (oaoa >= 100000000) {
-    console.log('Больше');
-} else {
-    console.log('Меньше');
-}
-
-console.log(oaoa);
 
 // Слайдер картинок
 
@@ -108,4 +116,79 @@ if (allImgSlider) {
 
         });
     }
+}
+
+// Фильтрация апартаментов
+
+const appCards = document.querySelectorAll('.appartment-block__apps-card');
+const appButtons = document.querySelectorAll('.appartment-block__item');
+
+appButtons.forEach(item => {
+    item.addEventListener('click', (e) => {
+        appButtons.forEach(el => { el.classList.remove('_active'); });
+        item.classList.add('_active')
+    })
+})
+
+document.querySelector('.appartment-block__menu').addEventListener('click', event => {
+    if (event.target.tagName !== 'LI') return false;
+
+    let filterClass = event.target.dataset['f'];
+
+
+    appCards.forEach(elem => {
+        elem.classList.remove('hide');
+        if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
+            elem.classList.add('hide');
+        }
+    });
+});
+
+
+// Кнопка showmore
+
+let showMoreButton = document.querySelector('.show__more');
+let hideMoreButton = document.querySelector('.hide__more');
+let showMoreButtonAll = document.querySelector('.four-section__showmore-button');
+
+showMoreButtonAll.addEventListener("click", function(e) {
+    hideMoreButton.classList.toggle('_active');
+    showMoreButton.classList.toggle('_active');
+    e.preventDefault();
+});
+
+
+//анимации при скроле
+const animItems = document.querySelectorAll('._anim-items');
+
+if (animItems.length > 0) {
+    window.addEventListener('scroll', animOnScroll);
+
+    function animOnScroll(params) {
+        for (let index = 0; index < animItems.length; index++) {
+            const animItem = animItems[index];
+            const animItemHeight = animItem.offsetHeight;
+            const animItemOffset = offset(animItem).top;
+            const animStart = 5;
+
+
+            let animItemPoint = window.innerHeight - animItemHeight / animStart;
+            if (animItemHeight > window.innerHeight) {
+                animItemPoint = window.innerHeight - window.innerHeight / animStart;
+
+            }
+
+            if ((scrollY > animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight)) {
+                animItem.classList.add('_anim-active');
+            }
+        }
+    }
+
+    function offset(el) {
+        const rect = el.getBoundingClientRect(),
+            scrollLeft = window.scrollX || document.documentElement.scrollLeft,
+            scrollTop = window.scrollY || document.documentElement.scrollTop;
+        return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+    }
+    animOnScroll();
 }

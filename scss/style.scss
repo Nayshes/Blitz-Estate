@@ -48,12 +48,26 @@ body._lock {
 // общ стили
 .block-title {
     &__title {
+        opacity: 0;
+        transform: translate(0, -50px);
+        transition: all 1s ease 0s;
+        &._anim-active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
         @include text_style (35px, (48/35)*100%);
         font-weight: 800;
         color: #000;
         margin-bottom: 15px;
     }
     &__subtitle {
+        opacity: 0;
+        transform: translate(0, -30px);
+        transition: all 1s ease .3s;
+        &._anim-active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
         @include text_style (22px, (36/22)*100%);
         color: #000;
     }
@@ -68,6 +82,48 @@ body._lock {
     min-height: 100vh;
     background-size: cover;
     padding-bottom: 40px;
+    &__apps-page {
+        background: url(../img/backgrounds/header_bg-apps-block5.jpg) center no-repeat;
+        min-height: 100vh;
+        background-size: cover;
+        padding-bottom: 40px;
+    }
+    &__invest-house-page {
+        background: url(../img/backgrounds/header_bg-apps-block8.jpg) top no-repeat;
+        min-height: 100vh;
+        background-size: cover;
+        padding-bottom: 40px;
+    }
+    &__invest-page {
+        background: url(../img/backgrounds/header_bg-apps-block9.jpg) top no-repeat;
+        min-height: 100vh;
+        background-size: cover;
+        padding-bottom: 40px;
+    }
+    &__yacht-page {
+        background: url(../img/backgrounds/header_bg-apps-block10.jpg) top no-repeat;
+        min-height: 100vh;
+        background-size: cover;
+        padding-bottom: 40px;
+    }
+    &__trust-page {
+        background: url(../img/backgrounds/header_bg-apps-block12.jpg) left no-repeat;
+        min-height: 100vh;
+        background-size: cover;
+        padding-bottom: 40px;
+    }
+    &__concierge-page {
+        background: url(../img/backgrounds/header_bg-apps-block14.jpg) left no-repeat;
+        min-height: 100vh;
+        background-size: cover;
+        padding-bottom: 40px;
+    }
+    &__ask-page {
+        background: #eef3f9;
+        min-height: 100vh;
+        background-size: cover;
+        padding-bottom: 40px;
+    }
 }
 
 
@@ -209,9 +265,35 @@ body._lock {
 /*--- Информационный блок под шапкой (превью)  ---*/
 
 .preview {
+    opacity: 0;
+    transform: translate(-100px, 0);
+    transition: all 1s ease 0s;
+    &._anim-active {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
     // margin-top: 10%;
     &__text-block {
         max-width: 586px;
+        &__apps-page {
+            max-width: 900px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            margin: 0 auto;
+            margin-top: 100px;
+            &__text {
+                color: #0670EB;
+            }
+        }
+        &__ask-page {
+            max-width: 900px;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+    }
+    &__subtitle-apps-page {
+        color: rgb(237, 236, 236);
     }
     &__title {
         font-weight: 900;
@@ -300,9 +382,17 @@ body._lock {
     &__block-title {
         text-align: center;
     }
+    &__block-title-apps-page {
+        margin-bottom: 100px;
+    }
 }
 
 .test {
+    opacity: 0;
+    transition: all 1s ease .5s;
+    &._anim-active {
+        opacity: 1;
+    }
     border: 3px solid #F6F6F6;
     width: 100%;
     margin: 0 auto;
@@ -347,8 +437,11 @@ body._lock {
             border-bottom-right-radius: 25px;
             transition: height .4s ease-out 0s;
         }
-        &:hover::before {
+        &.active::before {
             height: 70px;
+        }
+        &.active .test__img {
+            box-shadow: 0px -5px 30px #2a95e283;
         }
         &:hover .test__img {
             box-shadow: 0px -5px 30px #2a95e283;
@@ -446,12 +539,26 @@ body._lock {
 .third-section {
     margin-top: 60px;
     &__title {
+        opacity: 0;
+        transform: translate(0, -30px);
+        transition: all 1s ease .0s;
+        &._anim-active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
         @include text_style (35px, (48/35)*100%);
         font-weight: 800;
         margin-bottom: 30px;
         text-align: center;
     }
     &__servises-grid {
+        opacity: 0;
+        transform: translate(0, 50px);
+        transition: all 1s ease .3s;
+        &._anim-active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
         display: grid;
         grid-template-areas: "house money_house invest" "house boat boat" "management management concierge";
         grid-template-columns: repeat(auto-fit, min-max(350px, 373px));
@@ -589,11 +696,12 @@ body._lock {
         &:hover {
             background: rgb(233, 231, 231);
         }
-        & span {
+        & .show__more,
+        & .hide__more {
             position: relative;
             padding-right: 15px;
         }
-        & span::before {
+        & .show__more::before {
             content: '';
             position: absolute;
             top: 50%;
@@ -604,7 +712,7 @@ body._lock {
             transform: rotate(-45deg) translate(4.5px, 4.5px);
             // transform: rotate(-45deg) translate(-5.3px, -4.5px);
         }
-        & span::after {
+        & .show__more::after {
             content: '';
             position: absolute;
             top: 50%;
@@ -614,7 +722,36 @@ body._lock {
             background-color: #000;
             transform: rotate(45deg);
         }
+        & .hide__more::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 10px;
+            height: 1px;
+            background-color: #000;
+            transform: rotate(45deg) translate(5px, -4.5px);
+            // transform: rotate(-45deg) translate(-5.3px, -4.5px);
+        }
+        & .hide__more::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 10px;
+            height: 1px;
+            background-color: #000;
+            transform: rotate(-45deg);
+        }
     }
+}
+
+.hide__more._active {
+    display: none;
+}
+
+.show__more._active {
+    display: none;
 }
 
 .appartment-block {
@@ -640,8 +777,6 @@ body._lock {
         border-left: 1px solid #F6F6F6;
         transition: all .3s ease-out 0s;
         &:first-child {
-            background-color: #2A94E2;
-            color: #fff;
             border-left: 2px solid #F6F6F6;
         }
         &:last-child {
@@ -649,6 +784,10 @@ body._lock {
         }
         &:hover {
             background-color: #F6F6F6;
+        }
+        &._active {
+            background-color: #2A94E2;
+            color: #fff;
         }
     }
     &__apps-list {
@@ -677,8 +816,10 @@ body._lock {
             color: #2A94E2;
         }
         &:hover .appartment-block__button {
-            color: #fff;
             background-color: #2A94E2;
+        }
+        &:hover .appartment-block__button a {
+            color: #fff;
         }
     }
     &__under-card {
@@ -754,6 +895,13 @@ body._lock {
         align-items: center;
     }
     &__left-block {
+        opacity: 0;
+        transform: translate(-100px, 0px);
+        transition: all 1s ease .3s;
+        &._anim-active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
         max-width: 555px;
         min-width: 475px;
         width: 100%;
@@ -784,6 +932,13 @@ body._lock {
         }
     }
     &__right-block {
+        opacity: 0;
+        transform: translate(100px, 0px);
+        transition: all 1s ease .3s;
+        &._anim-active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
         max-width: 855px;
         width: 100%;
     }
@@ -1083,6 +1238,54 @@ body._lock {
         &:hover {
             background: #2A94E2;
             color: #fff;
+        }
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.ask-page {
+    &__top {
+        display: flex;
+        margin-top: 100px;
+    }
+    &__line {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    &__text {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    &__input {
+        padding: 15px;
+        color: #000;
+        font-size: 20px;
+        border: 2px solid #fff;
+        transition: all .2s ease-in;
+        &:focus {
+            border-color: #0670EB;
+        }
+    }
+    &__textarea {
+        height: 300px;
+        resize: none;
+    }
+    &__button {
+        padding: 20px 40px;
+        background-color: #0670EB;
+        color: #fff;
+        width: 100%;
+        border: 2px solid #0670EB;
+        transition: all .2s ease-in;
+        font-size: 20px;
+        &:hover {
+            background-color: #fff;
+            color: #0670EB;
         }
     }
 }
