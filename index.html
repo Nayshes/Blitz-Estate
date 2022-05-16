@@ -111,28 +111,66 @@
 
                     <div class="test__left-block ">
 
-                        <h2 class="test__title ">Выберите местоположение объекта</h2>
+                        <h2 class="test__title active first__card-test card__active-card">Выберите местоположение объекта</h2>
+                        <h2 class="test__title active second__card-test">Квартира или дом?</h2>
+                        <h2 class="test__title active third__card-test">Есть ли у вас домашние животные?</h2>
+                        <h2 class="test__title active four__card-test">Количество членов вашей семьи</h2>
+                        <h2 class="test__title active five__card-test">Подальше от центра или поближе к центру?</h2>
 
                         <div class="test__cards ">
 
                             <a href="# " class="locate_russia test__card-locate ">
-                                <div class="test__card ">
+                                <div class="test__card first__card-test card__active-card">
                                     <img src="img/russia.png " alt=" " class="test__img ">
                                     <div class="test__card-title ">В России</div>
                                 </div>
+                                <div class="test__card second__card-test">
+                                    <img src="img/test__img/kvart.jpg " alt=" " class="test__img ">
+                                    <div class="test__card-title ">Квартира</div>
+                                </div>
+                                <div class="test__card third__card-test">
+                                    <img src="img/test__img/home_animal.jpg " alt=" " class="test__img ">
+                                    <div class="test__card-title ">Да, есть</div>
+                                </div>
+                                <div class="test__card four__card-test">
+                                    <img src="img/test__img/fam3.jpg " alt=" " class="test__img ">
+                                    <div class="test__card-title ">1-3 человека</div>
+                                </div>
+                                <div class="test__card five__card-test">
+                                    <img src="img/test__img/centr.jpg" alt=" " class="test__img ">
+                                    <div class="test__card-title ">Поближе</div>
+                                </div>
                             </a>
+
                             <a href="# " class="locate_europe test__card-locate ">
-                                <div class="test__card ">
+                                <div class="test__card first__card-test card__active-card">
                                     <img src="img/europe.png " alt=" " class="test__img ">
                                     <div class="test__card-title ">За границей</div>
                                 </div>
+                                <div class="test__card second__card-test">
+                                    <img src="img/test__img/home.jpg " alt=" " class="test__img ">
+                                    <div class="test__card-title ">Частный дом</div>
+                                </div>
+                                <div class="test__card third__card-test">
+                                    <img src="img/test__img/no_animal.jpg " alt=" " class="test__img ">
+                                    <div class="test__card-title ">Нет, нету</div>
+                                </div>
+                                <div class="test__card four__card-test">
+                                    <img src="img/test__img/fam5.jpg " alt=" " class="test__img ">
+                                    <div class="test__card-title ">4 и более</div>
+                                </div>
+                                <div class="test__card five__card-test">
+                                    <img src="img/test__img/almost_cent.jpg " alt=" " class="test__img ">
+                                    <div class="test__card-title ">Подальше</div>
+                                </div>
                             </a>
+
 
                         </div>
 
                         <div class="test__answer-block ">
                             <div class="test__question-text ">Вы ответили на: <span class="right_answer-question ">0</span>/5 вопросов</div>
-                            <a href="# " class="test__question-button ">
+                            <a class="test__question-button ">
                                 <div class="test__button ">Продолжить <span></span><span></span><span></span></div>
                             </a>
                             <!-- 3 спана для стрелочки, вместо использования картинки, псевдоэлементов и сторонних сервисов -->
@@ -259,7 +297,7 @@
                     <div class="appartment-block__apps-list ">
 
                         <div class="appartment-block__apps-card twenty">
-                            <a href="# " class="appartment-block__card-link "></a>
+                            <a href="# " class="appartment-block__card-link popup-link first"></a>
                             <img src="img/appartmens/ap1.jpg " alt="house " class="appartment-block__card-img ">
                             <div class="appartment-block__under-card ">
                                 <h3 class="appartment-block__card-title ">Апартаменты в «башне ОКО»</h3>
@@ -274,13 +312,13 @@
                                         <div class="appartment-block__floor ">Этаж 52</div>
                                     </div>
                                 </div>
-                                <div class="appartment-block__button "><a href="# ">Назначить просмотр</a></div>
+                                <div class="appartment-block__button "><a class="popup-link first" href="# ">Назначить просмотр</a></div>
                             </div>
 
                         </div>
 
                         <div class="appartment-block__apps-card twenty">
-                            <a href="# " class="appartment-block__card-link "></a>
+                            <a href="# " class="appartment-block__card-link popup-link second"></a>
                             <img src="img/appartmens/ap2.jpg " alt="house " class="appartment-block__card-img ">
                             <div class="appartment-block__under-card ">
                                 <h3 class="appartment-block__card-title ">Апартаменты в «башне Империя»</h3>
@@ -295,13 +333,13 @@
                                         <div class="appartment-block__floor ">Этаж 35</div>
                                     </div>
                                 </div>
-                                <div class="appartment-block__button "><a href="# ">Назначить просмотр</a></div>
+                                <div class="appartment-block__button "><a class="popup-link second" href="# ">Назначить просмотр</a></div>
                             </div>
 
                         </div>
 
                         <div class="appartment-block__apps-card ">
-                            <a href="# " class="appartment-block__card-link "></a>
+                            <a href="# " class="appartment-block__card-link popup-link third"></a>
                             <img src="img/appartmens/ap3.jpg " alt="house " class="appartment-block__card-img ">
                             <div class="appartment-block__under-card ">
                                 <h3 class="appartment-block__card-title ">Апартаменты в «Neva Towers»</h3>
@@ -316,13 +354,13 @@
                                         <div class="appartment-block__floor ">Этаж 16</div>
                                     </div>
                                 </div>
-                                <div class="appartment-block__button "><a href="# ">Назначить просмотр</a></div>
+                                <div class="appartment-block__button "><a class="popup-link third" href="# ">Назначить просмотр</a></div>
                             </div>
 
                         </div>
 
                         <div class="appartment-block__apps-card fifty">
-                            <a href="# " class="appartment-block__card-link "></a>
+                            <a href="# " class="appartment-block__card-link popup-link four"></a>
                             <img src="img/appartmens/ap4.jpg " alt="house " class="appartment-block__card-img ">
                             <div class="appartment-block__under-card ">
                                 <h3 class="appartment-block__card-title ">Апартаменты в комплексе «Федерация»</h3>
@@ -337,13 +375,13 @@
                                         <div class="appartment-block__floor ">Этаж 84</div>
                                     </div>
                                 </div>
-                                <div class="appartment-block__button "><a href="# ">Назначить просмотр</a></div>
+                                <div class="appartment-block__button "><a class="popup-link four" href="# ">Назначить просмотр</a></div>
                             </div>
 
                         </div>
 
-                        <div class="appartment-block__apps-card thirty">
-                            <a href="# " class="appartment-block__card-link "></a>
+                        <div class="appartment-block__apps-card thirty here">
+                            <a href="# " class="appartment-block__card-link popup-link five"></a>
                             <img src="img/appartmens/ap5.jpg " alt="house " class="appartment-block__card-img ">
                             <div class="appartment-block__under-card ">
                                 <h3 class="appartment-block__card-title ">Апартаменты в «башне ОКО»</h3>
@@ -358,13 +396,13 @@
                                         <div class="appartment-block__floor ">Этаж 29</div>
                                     </div>
                                 </div>
-                                <div class="appartment-block__button "><a href="# ">Назначить просмотр</a></div>
+                                <div class="appartment-block__button "><a class="popup-link five" href="# ">Назначить просмотр</a></div>
                             </div>
 
                         </div>
 
                         <div class="appartment-block__apps-card twenty">
-                            <a href="# " class="appartment-block__card-link "></a>
+                            <a href="# " class="appartment-block__card-link popup-link six"></a>
                             <img src="img/appartmens/ap6.jpg " alt="house " class="appartment-block__card-img ">
                             <div class="appartment-block__under-card ">
                                 <h3 class="appartment-block__card-title ">Апартаменты в «Город столиц»</h3>
@@ -379,13 +417,13 @@
                                         <div class="appartment-block__floor ">Этаж 48</div>
                                     </div>
                                 </div>
-                                <div class="appartment-block__button "><a href="# ">Назначить просмотр</a></div>
+                                <div class="appartment-block__button "><a class="popup-link six" href="# ">Назначить просмотр</a></div>
                             </div>
 
                         </div>
 
-                        <div class="appartment-block__apps-card thirty">
-                            <a href="# " class="appartment-block__card-link "></a>
+                        <div class="appartment-block__apps-card thirty cards__hide-infirst">
+                            <a href="# " class="appartment-block__card-link popup-link seven"></a>
                             <img src="img/appartmens/ap7.jpg " alt="house " class="appartment-block__card-img ">
                             <div class="appartment-block__under-card ">
                                 <h3 class="appartment-block__card-title ">Апартаменты в «башне ОКО»</h3>
@@ -400,13 +438,13 @@
                                         <div class="appartment-block__floor ">Этаж 58</div>
                                     </div>
                                 </div>
-                                <div class="appartment-block__button "><a href="# ">Назначить просмотр</a></div>
+                                <div class="appartment-block__button "><a class="popup-link seven" href="# ">Назначить просмотр</a></div>
                             </div>
 
                         </div>
 
-                        <div class="appartment-block__apps-card thirty">
-                            <a href="# " class="appartment-block__card-link "></a>
+                        <div class="appartment-block__apps-card thirty cards__hide-infirst">
+                            <a href="# " class="appartment-block__card-link popup-link eight"></a>
                             <img src="img/appartmens/ap8.jpg " alt="house " class="appartment-block__card-img ">
                             <div class="appartment-block__under-card ">
                                 <h3 class="appartment-block__card-title ">Апартаменты в «башне Империя»</h3>
@@ -421,13 +459,13 @@
                                         <div class="appartment-block__floor ">Этаж 41</div>
                                     </div>
                                 </div>
-                                <div class="appartment-block__button "><a href="# ">Назначить просмотр</a></div>
+                                <div class="appartment-block__button "><a class="popup-link eight" href="# ">Назначить просмотр</a></div>
                             </div>
 
                         </div>
 
-                        <div class="appartment-block__apps-card fifty">
-                            <a href="# " class="appartment-block__card-link "></a>
+                        <div class="appartment-block__apps-card fifty cards__hide-infirst">
+                            <a href="# " class="appartment-block__card-link popup-link nine"></a>
                             <img src="img/appartmens/ap9.jpg " alt="house " class="appartment-block__card-img ">
                             <div class="appartment-block__under-card ">
                                 <h3 class="appartment-block__card-title ">Апартаменты в «Город столиц»</h3>
@@ -442,13 +480,13 @@
                                         <div class="appartment-block__floor ">Этаж 59</div>
                                     </div>
                                 </div>
-                                <div class="appartment-block__button "><a href="# ">Назначить просмотр</a></div>
+                                <div class="appartment-block__button "><a class="popup-link nine" href="# ">Назначить просмотр</a></div>
                             </div>
 
                         </div>
 
-                        <div class="appartment-block__apps-card hundred">
-                            <a href="# " class="appartment-block__card-link "></a>
+                        <div class="appartment-block__apps-card hundred cards__hide-infirst">
+                            <a href="# " class="appartment-block__card-link popup-link ten"></a>
                             <img src="img/appartmens/ap10.jpg " alt="house " class="appartment-block__card-img ">
                             <div class="appartment-block__under-card ">
                                 <h3 class="appartment-block__card-title ">Апартаменты в «Neva Towers»</h3>
@@ -456,20 +494,20 @@
                                 <div class="appartment-block__card-center ">
                                     <div class="appartment-block__left-block ">
                                         <div class="appartment-block__cost "><span class="cost-apps ">112 900 000</span> &#8381;</div>
-                                        <div class="appartment-block__cost-msquare ">642 142 ₽ за м²</div>
+                                        <div class="appartment-block__cost-msquare ">882 142 ₽ за м²</div>
                                     </div>
                                     <div class="appartment-block__right-block ">
-                                        <div class="appartment-block__square ">Площадь 140 м²</div>
+                                        <div class="appartment-block__square ">Площадь 128 м²</div>
                                         <div class="appartment-block__floor ">Этаж 61</div>
                                     </div>
                                 </div>
-                                <div class="appartment-block__button "><a href="# ">Назначить просмотр</a></div>
+                                <div class="appartment-block__button "><a class="popup-link ten" href="# ">Назначить просмотр</a></div>
                             </div>
 
                         </div>
 
                     </div>
-                    <a href="# " class="four-section__showmore-button"><span class="show__more">Показать еще</span><span class="hide__more _active">Скрыть</span></a>
+                    <a href="" data-goto=".here" class="four-section__showmore-button all__link"><span data-goto=".here" class="show__more all__link">Показать еще</span><span class="hide__more _active all__link" data-goto=".here">Скрыть</span></a>
 
                 </div>
 
@@ -722,10 +760,516 @@
         </footer>
 
 
+        <div id="popup" class="popup popup__first">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="#" class="popup__close close-popup">&times;</a>
+                    <div class="popup__title">Апартаменты в «башне ОКО»</div>
+                    <div class="popup__down">
 
+                        <div class="popup__right-block ">
+                            <div class="popup__slider-main ">
+                                <img src="img/apps__rooms/first/OKO1.jpg " alt="" class="popup__main-img popup__main-img1">
+                            </div>
 
+                            <div class="popup__slider-under ">
+                                <div class="popup__slider-img"><img src="img/apps__rooms/first/OKO1.jpg" alt="Апартаменты" class="popup__slider-img-item _active"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/first/OKO3.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/first/OKO4.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/first/OKO5.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                            </div>
+                        </div>
 
+                        <div class="popup__right">
+                            <div class="popup__room-title"><span class="cost-apps ">25 600 000</span> &#8381;</div>
+                            <div class="popup__under-title">365 714 ₽ за м²</div>
+                            <div class="popup__text"> Апартамент с отделкой. Планировкой предусмотрены одна спальня с гардеробной и своим санузлом, а также гостиная-кухня и дополнительным гостевым санузлом. Комплекс Москва-сити выбирают для себя успешные бизнесмены, спортсмены,
+                                политики и деятели культуры со всего мира. Объект актуален, для организации показа или уточнения подробностей свяжитесь с нами по телефону.
+                                <br> <br> Объект представляет собой две эффектные башни, одна из которых имеет 85 этажей, а другая 49, объединяет их платформа в виде кристалла. Архитектором проекта выступило американское бюро Skidmore, Owings and Merrill,
+                                положив в основу концепции совершенство простых геометрических форм, а также их органичную интеграцию в современное пространство столичного центра деловой жизни. В составе комплекса офисы, апартаменты, торговые помещения
+                                и машиноместа.
+                            </div>
+                            <div class="appartment-block__card-center ">
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Лот № 3546</div>
+                                    <div class="appartment-block__floor ">Налог на имущество 1,6 %</div>
+                                </div>
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Площадь 84 м²</div>
+                                    <div class="appartment-block__floor ">Этаж 52</div>
+                                </div>
+                            </div>
 
+                        </div>
+
+                    </div>
+                    <div class="popup__buttons">
+                        <a href="tel:+78142332211" class="popup__button">Назначить осмотр</a>
+                        <a href="calc_ipot/index.html" class="popup__button">Рассчитать ипотеку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup" class="popup popup__second">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="#" class="popup__close close-popup">&times;</a>
+                    <div class="popup__title">Апартаменты в «башне Империя»</div>
+                    <div class="popup__down">
+
+                        <div class="popup__right-block ">
+                            <div class="popup__slider-main ">
+                                <img src="img/apps__rooms/second/1.jpg " alt="" class="popup__main-img popup__main-img2">
+                            </div>
+
+                            <div class="popup__slider-under ">
+                                <div class="popup__slider-img"><img src="img/apps__rooms/second/1.jpg" alt="Апартаменты" class="popup__slider-img-item _active"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/second/3.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/second/4.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/second/5.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                            </div>
+                        </div>
+
+                        <div class="popup__right">
+                            <div class="popup__room-title"><span class="cost-apps ">27 900 000</span> &#8381;</div>
+                            <div class="popup__under-title">420 000 ₽ за м²</div>
+                            <div class="popup__text"> Просторный 2-х комнатный апартамент с панорамным остеклением, дизайнерская отделка, полностью укомплектованы мебелью и функциональной бытовой техникой, включая посудомоечную машину. Апартамент с отличным видом на Москва-Сити.
+                                В комплексе Башня Империя предусмотрена клубная инфраструктура: фитнес-клуб с панорамным бассейном, спа, собственный кинозал, караоке, сквош-корт, музыкальная студия. Комплекс Москва-сити выбирают для себя успешные бизнесмены,
+                                спортсмены, политики и деятели культуры со всего мира.
+                                <br> <br> Конфигурация башен подчеркнуто лаконична: форма корпусов-пластин дополнена небольшими с движками центральных частей, создающих подобие остова башен, который облекают с двух сторон сужающиеся ярусы. Автор проекта
+                                - архитектурная мастерская SPEECH (Сергей Чобан, Алексей Ильин). В комплекс Neva Towers входят две башни – коммерческая (63 этажа) и жилая (75 этажей). В составе комплекса офисы, апартаменты, торговые помещения и машиноместа
+                            </div>
+                            <div class="appartment-block__card-center ">
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Лот № 4547</div>
+                                    <div class="appartment-block__floor ">Налог на имущество 1,65 %</div>
+                                </div>
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Площадь 62 м²</div>
+                                    <div class="appartment-block__floor ">Этаж 35</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="popup__buttons">
+                        <a href="tel:+78142332211" class="popup__button">Назначить осмотр</a>
+                        <a href="calc_ipot/index.html" class="popup__button">Рассчитать ипотеку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup" class="popup popup__third">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="#" class="popup__close close-popup">&times;</a>
+                    <div class="popup__title">Апартаменты в «Neva Towers»</div>
+                    <div class="popup__down">
+
+                        <div class="popup__right-block ">
+                            <div class="popup__slider-main ">
+                                <img src="img/apps__rooms/third/1.jpg " alt="" class="popup__main-img popup__main-img3">
+                            </div>
+
+                            <div class="popup__slider-under ">
+                                <div class="popup__slider-img"><img src="img/apps__rooms/third/1.jpg" alt="Апартаменты" class="popup__slider-img-item _active"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/third/2.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/third/3.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/third/5.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                            </div>
+                        </div>
+
+                        <div class="popup__right">
+                            <div class="popup__room-title"><span class="cost-apps ">19 600 000</span> &#8381;</div>
+                            <div class="popup__under-title">475 000 ₽ за м²</div>
+                            <div class="popup__text"> Просторный 2-х комнатный апартамент с панорамным остеклением, дизайнерская отделка, полностью укомплектованы мебелью и бытовой техникой. Планировка: кухня-гостиная, спальня с гардеробной, ванная комната. В комплексе Neva Towers
+                                предусмотрена клубная инфраструктура: фитнес-клуб с панорамным бассейном, спа, собственный кинозал, караоке, сквош-корт, музыкальная студия. Комплекс Москва-сити выбирают для себя успешные бизнесмены, спортсмены, политики
+                                и деятели культуры со всего мира.
+                                <br> <br> Конфигурация башен подчеркнуто лаконична: форма корпусов-пластин дополнена небольшими с движками центральных частей, создающих подобие остова башен, который облекают с двух сторон сужающиеся ярусы. Автор проекта
+                                - архитектурная мастерская SPEECH (Сергей Чобан, Алексей Ильин). В комплекс Neva Towers входят две башни – коммерческая (63 этажа) и жилая (75 этажей). В составе комплекса офисы, апартаменты, торговые помещения и машиноместа
+                            </div>
+                            <div class="appartment-block__card-center ">
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Лот № 4548</div>
+                                    <div class="appartment-block__floor ">Налог на имущество 1,6 %</div>
+                                </div>
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Площадь 40 м²</div>
+                                    <div class="appartment-block__floor ">Этаж 16</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="popup__buttons">
+                        <a href="tel:+78142332211" class="popup__button">Назначить осмотр</a>
+                        <a href="calc_ipot/index.html" class="popup__button">Рассчитать ипотеку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup" class="popup popup__four">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="#" class="popup__close close-popup">&times;</a>
+                    <div class="popup__title">Апартаменты в комплексе «Федерация»</div>
+                    <div class="popup__down">
+
+                        <div class="popup__right-block ">
+                            <div class="popup__slider-main ">
+                                <img src="img/apps__rooms/four/1.jpg " alt="" class="popup__main-img">
+                            </div>
+
+                            <div class="popup__slider-under ">
+                                <div class="popup__slider-img"><img src="img/apps__rooms/four/1.jpg" alt="Апартаменты" class="popup__slider-img-item _active"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/four/2.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/four/3.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/four/4.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                            </div>
+                        </div>
+
+                        <div class="popup__right">
+                            <div class="popup__room-title"><span class="cost-apps ">59 500 000</span> &#8381;</div>
+                            <div class="popup__under-title">540 909 ₽ за м²</div>
+                            <div class="popup__text"> Апартамент с дизайнерской отделкой. Планировкой предусмотрено: большая гостиная-кухня, две спальни, две ванные комнаты и один гостевой санузел. Панорамный вид на Москву и реку. Комплекс Москва-сити выбирают для себя успешные
+                                бизнесмены, спортсмены, политики и деятели культуры со всего мира.
+                                <br> <br> «Башни Федерации» - четвертое по величине строение на территории Европы, состоящее из двух башен. Архитектура каждой из них впечатляет: дома состоят из блоков, которые смещены относительно друг друга. Комплекс
+                                состоит из двух башен апартаментов Москва и Санкт-Петербург 76 и 69 этажей соответсвенно. А также офисный 19-ти этажный стилобат. В составе комплекса офисы, апартаменты, торговые помещения и машиноместа
+                            </div>
+                            <div class="appartment-block__card-center ">
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Лот № 4549</div>
+                                    <div class="appartment-block__floor ">Налог на имущество 1,8 %</div>
+                                </div>
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Площадь 110 м²</div>
+                                    <div class="appartment-block__floor ">Этаж 84</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="popup__buttons">
+                        <a href="tel:+78142332211" class="popup__button">Назначить осмотр</a>
+                        <a href="calc_ipot/index.html" class="popup__button">Рассчитать ипотеку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup" class="popup popup__five">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="#" class="popup__close close-popup">&times;</a>
+                    <div class="popup__title">Апартаменты в «башне ОКО»</div>
+                    <div class="popup__down">
+
+                        <div class="popup__right-block ">
+                            <div class="popup__slider-main ">
+                                <img src="img/apps__rooms/five/3.jpg " alt="" class="popup__main-img">
+                            </div>
+
+                            <div class="popup__slider-under ">
+                                <div class="popup__slider-img"><img src="img/apps__rooms/five/3.jpg" alt="Апартаменты" class="popup__slider-img-item _active"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/five/4.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/five/6.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/five/5.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                            </div>
+                        </div>
+
+                        <div class="popup__right">
+                            <div class="popup__room-title"><span class="cost-apps ">34 900 000</span> &#8381;</div>
+                            <div class="popup__under-title">396 590 ₽ за м²</div>
+                            <div class="popup__text"> Дизайнерский апартамент с отделкой и дорогой мебелью. Комфортная планировка для проживания в деловом центре Москвы: кухня-гостиная, две спальни, две ванных комнаты с джакузи и гостевой санузел. Панорамное остекление с видом
+                                на гостиницу Легенда и Москва-реку. Комплекс Москва-сити выбирают для себя успешные бизнесмены, спортсмены, политики и деятели культуры со всего мира.
+                                <br> <br> Объект представляет собой две эффектные башни, одна из которых имеет 85 этажей, а другая 49, объединяет их платформа в виде кристалла. Архитектором проекта выступило американское бюро Skidmore, Owings and Merrill,
+                                положив в основу концепции совершенство простых геометрических форм, а также их органичную интеграцию в современное пространство столичного центра деловой жизни. В составе комплекса офисы, апартаменты, торговые помещения
+                                и машиноместа.
+                            </div>
+                            <div class="appartment-block__card-center ">
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Лот № 4550</div>
+                                    <div class="appartment-block__floor ">Налог на имущество 1,67 %</div>
+                                </div>
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Площадь 88 м²</div>
+                                    <div class="appartment-block__floor ">Этаж 29</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="popup__buttons">
+                        <a href="tel:+78142332211" class="popup__button">Назначить осмотр</a>
+                        <a href="calc_ipot/index.html" class="popup__button">Рассчитать ипотеку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup" class="popup popup__six">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="#" class="popup__close close-popup">&times;</a>
+                    <div class="popup__title">Апартаменты в «Город столиц»</div>
+                    <div class="popup__down">
+
+                        <div class="popup__right-block ">
+                            <div class="popup__slider-main ">
+                                <img src="img/apps__rooms/six/1.jpg " alt="" class="popup__main-img">
+                            </div>
+
+                            <div class="popup__slider-under ">
+                                <div class="popup__slider-img"><img src="img/apps__rooms/six/1.jpg" alt="Апартаменты" class="popup__slider-img-item _active"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/six/3.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/six/4.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/six/5.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                            </div>
+                        </div>
+
+                        <div class="popup__right">
+                            <div class="popup__room-title"><span class="cost-apps ">28 400 000</span> &#8381;</div>
+                            <div class="popup__under-title">498 245 ₽ за м²</div>
+                            <div class="popup__text"> Элитные апартаменты с клубной инфраструктурой, собственным парком и бассейном на крыше. Качественная отделка в современном стиле, бытовая техника ведущих производителей, полностью укомплектованы мебелью и бытовой техникой.
+                                Планировка: кухня-гостиная, спальня, ванная комната. Панорамные окна с завораживающими видами на башни комплекса Москва-Сити, большой сквер на внутренней закрытой территории, аллеи для пробежек, свой спорт-клуб с бассейном.
+                                Консьерж-сервис, охраняемая территория. Комплекс Москва-сити выбирают для себя успешные бизнесмены, спортсмены, политики и деятели культуры со всего мира.
+                                <br> <br> «Город столиц» - четвертое по величине строение на территории Европы, состоящее из двух башен. Архитектура каждой из них впечатляет: дома состоят из блоков, которые смещены относительно друг друга. Комплекс состоит
+                                из двух башен апартаментов Москва и Санкт-Петербург 76 и 69 этажей соответсвенно. А также офисный 19-ти этажный стилобат. В составе комплекса офисы, апартаменты, торговые помещения и машиноместа
+                            </div>
+                            <div class="appartment-block__card-center ">
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Лот № 4551</div>
+                                    <div class="appartment-block__floor ">Налог на имущество 1,6 %</div>
+                                </div>
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Площадь 57 м²</div>
+                                    <div class="appartment-block__floor ">Этаж 48</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="popup__buttons">
+                        <a href="tel:+78142332211" class="popup__button">Назначить осмотр</a>
+                        <a href="calc_ipot/index.html" class="popup__button">Рассчитать ипотеку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup" class="popup popup__seven">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="#" class="popup__close close-popup">&times;</a>
+                    <div class="popup__title">Апартаменты в «башне ОКО»</div>
+                    <div class="popup__down">
+
+                        <div class="popup__right-block ">
+                            <div class="popup__slider-main ">
+                                <img src="img/apps__rooms/seven/1.jpg " alt="" class="popup__main-img">
+                            </div>
+
+                            <div class="popup__slider-under ">
+                                <div class="popup__slider-img"><img src="img/apps__rooms/seven/1.jpg" alt="Апартаменты" class="popup__slider-img-item _active"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/seven/3.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/seven/4.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/seven/5.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                            </div>
+                        </div>
+
+                        <div class="popup__right">
+                            <div class="popup__room-title"><span class="cost-apps ">38 200 000</span> &#8381;</div>
+                            <div class="popup__under-title">553 623 ₽ за м²</div>
+                            <div class="popup__text"> Угловой панорамный апартамент с клубной инфраструктурой, собственным парком и бассейном на крыше. Общая площадь - 69 м². Качественная отделка в современном стиле, бытовая техника ведущих производителей, полностью укомплектованы
+                                мебелью и бытовой техникой. Планировка: кухня-гостиная, спальня, ванная комната. Панорамные окна с завораживающими видами на башни комплекса Москва-Сити, большой сквер на внутренней закрытой территории, аллеи для пробежек,
+                                свой спорт-клуб с бассейном. Консьерж-сервис, охраняемая территория. Комплекс Москва-сити выбирают для себя успешные бизнесмены, спортсмены, политики и деятели культуры со всего мира.
+                                <br> <br> Объект представляет собой две эффектные башни, одна из которых имеет 85 этажей, а другая 49, объединяет их платформа в виде кристалла. Архитектором проекта выступило американское бюро Skidmore, Owings and Merrill,
+                                положив в основу концепции совершенство простых геометрических форм, а также их органичную интеграцию в современное пространство столичного центра деловой жизни. В составе комплекса офисы, апартаменты, торговые помещения
+                                и машиноместа.
+                            </div>
+                            <div class="appartment-block__card-center ">
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Лот № 4552</div>
+                                    <div class="appartment-block__floor ">Налог на имущество 1,74 %</div>
+                                </div>
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Площадь 69 м²</div>
+                                    <div class="appartment-block__floor ">Этаж 58</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="popup__buttons">
+                        <a href="tel:+78142332211" class="popup__button">Назначить осмотр</a>
+                        <a href="calc_ipot/index.html" class="popup__button">Рассчитать ипотеку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup" class="popup popup__eight">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="#" class="popup__close close-popup">&times;</a>
+                    <div class="popup__title">Апартаменты в «башне Империя»</div>
+                    <div class="popup__down">
+
+                        <div class="popup__right-block ">
+                            <div class="popup__slider-main ">
+                                <img src="img/apps__rooms/eight/1.jpg " alt="" class="popup__main-img">
+                            </div>
+
+                            <div class="popup__slider-under ">
+                                <div class="popup__slider-img"><img src="img/apps__rooms/eight/1.jpg" alt="Апартаменты" class="popup__slider-img-item _active"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/eight/2.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/eight/3.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/eight/4.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                            </div>
+                        </div>
+
+                        <div class="popup__right">
+                            <div class="popup__room-title"><span class="cost-apps ">41 000 000</span> &#8381;</div>
+                            <div class="popup__under-title">554 054 ₽ за м²</div>
+                            <div class="popup__text"> Двухуровневый апартамент с дизайнерской отделкой. Планировка: гостиная-кухня, ванная комната с душевой. На втором уровне спальня и гардеробная. Панорамный вид на башню Эволюция. Высота потолков - 5,5 м. Комплекс Москва-сити
+                                выбирают для себя успешные бизнесмены, спортсмены, политики и деятели культуры со всего мира. Объект актуален, для организации показа или уточнения подробностей свяжитесь с нами по телефону.
+                                <br> <br> Лаконичная и при этом крайне необычная, не похожая ни на одно другое здание в мире «Империя» стала настоящим вызовом для архитектурного бюро NBBJ. Но вызов этот был принят с честью, и теперь башня является подлинным
+                                украшением делового квартала. Высота 239 м., всего 62 этажа. В составе комплекса офисы, апартаменты, торговые помещения и машиноместа.
+                            </div>
+                            <div class="appartment-block__card-center ">
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Лот № 4553</div>
+                                    <div class="appartment-block__floor ">Налог на имущество 1,72 %</div>
+                                </div>
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Площадь 74 м²</div>
+                                    <div class="appartment-block__floor ">Этаж 41</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="popup__buttons">
+                        <a href="tel:+78142332211" class="popup__button">Назначить осмотр</a>
+                        <a href="calc_ipot/index.html" class="popup__button">Рассчитать ипотеку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup" class="popup popup__nine">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="#" class="popup__close close-popup">&times;</a>
+                    <div class="popup__title">Апартаменты в «Город столиц»</div>
+                    <div class="popup__down">
+
+                        <div class="popup__right-block ">
+                            <div class="popup__slider-main ">
+                                <img src="img/apps__rooms/nine/1.jpg " alt="" class="popup__main-img">
+                            </div>
+
+                            <div class="popup__slider-under ">
+                                <div class="popup__slider-img"><img src="img/apps__rooms/nine/1.jpg" alt="Апартаменты" class="popup__slider-img-item _active"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/nine/2.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/nine/3.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/nine/4.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                            </div>
+                        </div>
+
+                        <div class="popup__right">
+                            <div class="popup__room-title"><span class="cost-apps ">53 200 000</span> &#8381;</div>
+                            <div class="popup__under-title">565 957 ₽ за м²</div>
+                            <div class="popup__text"> Двухкомнатные меблированный апартаменты с дизайнерской отделкой. Панорамное остекление с замечательным видом на Кремль, МГУ, Воробьевы горы и Поклонная Гора. Продуманная планировка: гостиная, кухня-столовая, 2 спальни, кабинет,
+                                домашний кинотеатр, 4 встроенных шкафа, 2 санузла. Итальянской сантехника, есть хаммам и джакузи. Отделка из качественных материалов: мрамор, гранит, экзотические породы дерева. Апартаменты полностью готовы к комфортному
+                                проживанию! Комплекс Москва-сити выбирают для себя успешные бизнесмены, спортсмены, политики и деятели культуры со всего мира. Объект актуален, для организации показа или уточнения подробностей свяжитесь с нами по телефону.
+                                <br> <br> «Город столиц» - четвертое по величине строение на территории Европы, состоящее из двух башен. Архитектура каждой из них впечатляет: дома состоят из блоков, которые смещены относительно друг друга. Комплекс состоит
+                                из двух башен апартаментов Москва и Санкт-Петербург 76 и 69 этажей соответсвенно. А также офисный 19-ти этажный стилобат. В составе комплекса офисы, апартаменты, торговые помещения и машиноместа
+                            </div>
+                            <div class="appartment-block__card-center ">
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Лот № 4554</div>
+                                    <div class="appartment-block__floor ">Налог на имущество 1,87 %</div>
+                                </div>
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Площадь 94 м²</div>
+                                    <div class="appartment-block__floor ">Этаж 59</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="popup__buttons">
+                        <a href="tel:+78142332211" class="popup__button">Назначить осмотр</a>
+                        <a href="calc_ipot/index.html" class="popup__button">Рассчитать ипотеку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup" class="popup popup__ten">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <a href="#" class="popup__close close-popup">&times;</a>
+                    <div class="popup__title">Апартаменты в «Neva Towers»</div>
+                    <div class="popup__down">
+
+                        <div class="popup__right-block ">
+                            <div class="popup__slider-main ">
+                                <img src="img/apps__rooms/ten/1.jpg " alt="" class="popup__main-img">
+                            </div>
+
+                            <div class="popup__slider-under ">
+                                <div class="popup__slider-img"><img src="img/apps__rooms/ten/1.jpg" alt="Апартаменты" class="popup__slider-img-item _active"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/ten/2.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/ten/3.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                                <div class="popup__slider-img"><img src="img/apps__rooms/ten/4.jpg" alt="Апартаменты" class="popup__slider-img-item"></div>
+                            </div>
+                        </div>
+
+                        <div class="popup__right">
+                            <div class="popup__room-title"><span class="cost-apps ">112 900 000</span> &#8381;</div>
+                            <div class="popup__under-title">882 142 ₽ за м²</div>
+                            <div class="popup__text"> Просторные двухкомнатные апартаменты с дизайнерской отделкой, оборудованы современной системой вентиляции, кондиционирования и пожарной безопасности. Апартаменты состоят из: гостиной-кухни, спальни, кабинета, коридора, ванной
+                                комнаты, холла. Высота потолков - 3,5 метра. Из панорамных окон открывается вид на Москва-Сити. Для владельцев апартаментов в комплексе Neva Towers предусмотрена клубная инфраструктура: фитнес-клуб с панорамным бассейном,
+                                спа, собственный кинозал, караоке, сквош-корт, музыкальная студия. Комплекс Москва-сити выбирают для себя успешные бизнесмены, спортсмены, политики и деятели культуры со всего мира. Объект актуален, для организации показа
+                                или уточнения подробностей свяжитесь с нами по телефону.
+
+                                <br> <br> Конфигурация башен подчеркнуто лаконична: форма корпусов-пластин дополнена небольшими с движками центральных частей, создающих подобие остова башен, который облекают с двух сторон сужающиеся ярусы. Автор проекта
+                                - архитектурная мастерская SPEECH (Сергей Чобан, Алексей Ильин). В комплекс Neva Towers входят две башни – коммерческая (63 этажа) и жилая (75 этажей). В составе комплекса офисы, апартаменты, торговые помещения и машиноместа
+                            </div>
+                            <div class="appartment-block__card-center ">
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Лот № 4555</div>
+                                    <div class="appartment-block__floor ">Налог на имущество 1,92 %</div>
+                                </div>
+                                <div class="appartment-block__right-block ">
+                                    <div class="appartment-block__square ">Площадь 128 м²</div>
+                                    <div class="appartment-block__floor ">Этаж 61</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="popup__buttons">
+                        <a href="tel:+78142332211" class="popup__button">Назначить осмотр</a>
+                        <a href="calc_ipot/index.html" class="popup__button">Рассчитать ипотеку</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     <script src="js/main.js "></script>

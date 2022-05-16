@@ -9,17 +9,20 @@ if (iconMenu) {
         iconMenu.classList.toggle('_active');
         MenuBody.classList.toggle('_active');
         iconMenu.style.pointerEvents = "none";
+        document.body.style.paddingRight = 0;
         setTimeout(function() {
             iconMenu.style.pointerEvents = "auto";
         }, 300);
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             document.body.classList.toggle('_lock');
         } else {
+            const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+            document.body.style.paddingRight = lockPaddingValue;
             document.body.classList.toggle('__lock');
+
         }
     });
 }
-
 
 //Прокрутка при клике 
 
@@ -77,25 +80,8 @@ if (gridCards) {
     }
 }
 
-const cardLocate = document.querySelectorAll('.test__card');
-let answer = document.querySelector('.right_answer-question');
-let answerContent = Number(answer.textContent);
 
-cardLocate.forEach(item => {
-    item.addEventListener('click', (e) => {
-        cardLocate.forEach(el => {
-            answer.innerHTML = 0;
-            el.classList.remove('active');
-        });
-        item.classList.add('active');
-        answer.innerHTML = 1;
-        e.preventDefault();
-    })
-
-})
-
-
-// Слайдер картинок
+// Слайдер картинок главная
 
 let allImgSlider = document.querySelectorAll('.five-section__slider-img-item');
 let mainImg = document.querySelector('.five-section__main-img');
@@ -117,6 +103,8 @@ if (allImgSlider) {
         });
     }
 }
+
+
 
 // Фильтрация апартаментов
 
@@ -145,17 +133,6 @@ document.querySelector('.appartment-block__menu').addEventListener('click', even
 });
 
 
-// Кнопка showmore
-
-let showMoreButton = document.querySelector('.show__more');
-let hideMoreButton = document.querySelector('.hide__more');
-let showMoreButtonAll = document.querySelector('.four-section__showmore-button');
-
-showMoreButtonAll.addEventListener("click", function(e) {
-    hideMoreButton.classList.toggle('_active');
-    showMoreButton.classList.toggle('_active');
-    e.preventDefault();
-});
 
 
 //анимации при скроле
@@ -192,3 +169,232 @@ if (animItems.length > 0) {
     }
     animOnScroll();
 }
+
+
+
+//  ПОП-АП ОКНА ДЛЯ КОМНАТ
+
+
+const popupLinks = document.querySelectorAll('.popup-link');
+const lockPadding = document.querySelectorAll('.lock-padding');
+
+let unlock = true;
+
+const timeout = 50;
+
+if (popupLinks.length > 0) {
+    for (let index = 0; index < popupLinks.length; index++) {
+        const popupLink = popupLinks[index];
+        popupLink.addEventListener("click", function(e) {
+            if (popupLink.classList.contains('first')) {
+                const curentPopup = document.querySelector('.popup__first');
+                popupOpen(curentPopup);
+            } else if (popupLink.classList.contains('second')) {
+                const curentPopup = document.querySelector('.popup__second');
+                popupOpen(curentPopup);
+            } else if (popupLink.classList.contains('third')) {
+                const curentPopup = document.querySelector('.popup__third');
+                popupOpen(curentPopup);
+            } else if (popupLink.classList.contains('four')) {
+                const curentPopup = document.querySelector('.popup__four');
+                popupOpen(curentPopup);
+            } else if (popupLink.classList.contains('five')) {
+                const curentPopup = document.querySelector('.popup__five');
+                popupOpen(curentPopup);
+            } else if (popupLink.classList.contains('six')) {
+                const curentPopup = document.querySelector('.popup__six');
+                popupOpen(curentPopup);
+            } else if (popupLink.classList.contains('seven')) {
+                const curentPopup = document.querySelector('.popup__seven');
+                popupOpen(curentPopup);
+            } else if (popupLink.classList.contains('eight')) {
+                const curentPopup = document.querySelector('.popup__eight');
+                popupOpen(curentPopup);
+            } else if (popupLink.classList.contains('nine')) {
+                const curentPopup = document.querySelector('.popup__nine');
+                popupOpen(curentPopup);
+            } else if (popupLink.classList.contains('ten')) {
+                const curentPopup = document.querySelector('.popup__ten');
+                popupOpen(curentPopup);
+            }
+            e.preventDefault();
+
+            let popupTESTs = document.querySelectorAll('.popup');
+            for (let i = 0; i < popupTESTs.length; i++) {
+                let popupTEST = popupTESTs[i];
+                if (popupTEST.classList.contains('open')) {
+                    // Слайдер картинок попап
+                    let allImgSliderPopup = popupTEST.querySelectorAll('.popup__slider-img-item');
+                    let popupMainImg = popupTEST.querySelector('.popup__main-img');
+                    if (allImgSliderPopup) {
+                        for (let i = 0; i < allImgSliderPopup.length; i++) {
+                            let imgSliderPopup = allImgSliderPopup[i];
+                            imgSliderPopup.addEventListener("click", function(e) {
+                                for (let i = 0; i < allImgSliderPopup.length; i++) {
+                                    if (allImgSliderPopup[i].classList.contains('_active')) {
+                                        allImgSliderPopup[i].classList.remove('_active');
+                                    }
+                                }
+                                popupMainImg.src = allImgSliderPopup[i].src;
+                                allImgSliderPopup[i].classList.add('_active');
+                            });
+                        }
+                    }
+                } else {}
+            }
+
+        });
+    }
+}
+
+const popupCloseIcon = document.querySelectorAll('.close-popup');
+if (popupCloseIcon.length > 0) {
+    for (let index = 0; index < popupCloseIcon.length; index++) {
+        const el = popupCloseIcon[index];
+        el.addEventListener("click", function(e) {
+            body.classList.remove('__lock');
+            body.style.paddingRight = '0px';
+            if (e.target.closest('.popup')) {
+                const curentPopup = e.target.closest('.popup');
+                curentPopup.classList.remove('open');
+            }
+            e.preventDefault();
+        });
+    }
+}
+
+function popupOpen(curentPopup) {
+    if (curentPopup && unlock) {
+        const popupActive = document.querySelector('.popup.open');
+        if (popupActive) {
+            popupClose(popupActive, false);
+        } else {
+            bodyLock();
+        }
+        curentPopup.classList.add('open');
+        curentPopup.addEventListener("click", function(e) {
+            if (!e.target.closest('.popup__content')) {
+                curentPopup.classList.remove('open');
+                body.classList.remove('__lock');
+                body.style.paddingRight = '0px';
+
+            }
+        });
+    }
+}
+
+function bodyLock() {
+    const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+    document.body.style.paddingRight = lockPaddingValue;
+    document.body.classList.toggle('__lock');
+    unlock = false;
+    setTimeout(function() {
+        unlock = true;
+    }, timeout);
+}
+
+
+//  КНОПКА SHOWMORE
+
+
+let boxShowMores = document.querySelectorAll('.cards__hide-infirst');
+let btnShowMore = document.querySelector('.four-section__showmore-button');
+let showMoreButton = document.querySelector('.show__more');
+let hideMoreButton = document.querySelector('.hide__more');
+let showMoreButtonAll = document.querySelector('.four-section__showmore-button');
+
+
+if (boxShowMores) {
+
+    for (let j = 0; j < boxShowMores.length; j++) {
+        boxShowMores[j].classList.add('card__hidden')
+    }
+}
+
+btnShowMore.addEventListener("click", function(e) {
+
+    for (let j = 0; j < boxShowMores.length; j++) {
+        boxShowMores[j].classList.toggle('card__hidden')
+
+    }
+
+});
+
+
+
+
+showMoreButtonAll.addEventListener("click", function(e) {
+    hideMoreButton.classList.toggle('_active');
+    showMoreButton.classList.toggle('_active');
+    e.preventDefault();
+});
+
+
+
+// ТЕСТ
+
+const cardLocate = document.querySelectorAll('.test__card');
+let answer = document.querySelector('.right_answer-question');
+let testButton = document.querySelector('.test__button');
+const firstCardTest = document.querySelectorAll('.first__card-test');
+const secondCardTest = document.querySelectorAll('.second__card-test');
+const thirdCardTest = document.querySelectorAll('.third__card-test');
+const fourCardTest = document.querySelectorAll('.four__card-test');
+const fiveCardTest = document.querySelectorAll('.five__card-test');
+let locateRussia = document.querySelector('.locate_russia');
+let locateEurope = document.querySelector('.locate_europe');
+let finalCardTest = document.querySelector('.test__final');
+let testButtonText = testButton.textContent;
+
+cardLocate.forEach(item => {
+    item.addEventListener('click', (e) => {
+        cardLocate.forEach(el => {
+            el.classList.remove('active');
+        });
+        item.classList.add('active');
+        e.preventDefault();
+    })
+
+})
+
+
+
+testButton.addEventListener("click", function(e) {
+    let answer = document.querySelector('.right_answer-question');
+    let answerContent = Number(answer.textContent);
+    if (answerContent == '0') {
+        for (let i = 0; i < firstCardTest.length; i++) {
+            firstCardTest[i].classList.remove('card__active-card');
+            secondCardTest[i].classList.add('card__active-card');
+            answer.innerHTML = 1;
+
+        }
+    } else if (answerContent == '1') {
+        for (let i = 0; i < secondCardTest.length; i++) {
+            secondCardTest[i].classList.remove('card__active-card');
+            thirdCardTest[i].classList.add('card__active-card');
+            answer.innerHTML = 2;
+        }
+    } else if (answerContent == '2') {
+        for (let i = 0; i < thirdCardTest.length; i++) {
+            thirdCardTest[i].classList.remove('card__active-card');
+            fourCardTest[i].classList.add('card__active-card');
+            answer.innerHTML = 3;
+        }
+    } else if (answerContent == '3') {
+        for (let i = 0; i < fourCardTest.length; i++) {
+            fourCardTest[i].classList.remove('card__active-card');
+            fiveCardTest[i].classList.add('card__active-card');
+            answer.innerHTML = 4;
+        }
+    } else if (answerContent == '4') {
+        for (let i = 0; i < fiveCardTest.length; i++) {
+            testButton.innerHTML = "Завершить тест";
+            answer.innerHTML = 5;
+        }
+    } else if (answerContent == '5') {
+        alert('Поздравляем, вы прошли тест!');
+
+    }
+    e.preventDefault();
+});

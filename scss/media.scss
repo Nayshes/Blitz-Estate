@@ -1,6 +1,6 @@
   /*----------------------------- Доработка для маленьких экранов (ноутбуки/планшеты) -----------------------------*/
   
-  @media screen and (min-width: 1146px) {
+  @media screen and (min-width: 1147px) {
       .five-section__main-img {
           height: 450px;
       }
@@ -322,6 +322,11 @@
           }
       }
       /*===================================== Второй блок тест =====================================*/
+      .card__active-card {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
       .test {
           &__cards {
               flex-direction: column;
@@ -332,9 +337,6 @@
           }
           &__card {
               position: relative;
-              display: flex;
-              justify-content: center;
-              align-items: center;
               &:hover::before {
                   height: 0px;
               }
@@ -492,5 +494,97 @@
               font-size: 16px;
               padding: 22 0;
           }
+      }
+  }
+  /*=====================================  блок ПОПАП =====================================*/
+  
+  @media screen and (max-width: 850px) {
+      .popup {
+          &__down {
+              flex-wrap: wrap;
+          }
+          &__left {
+              margin-right: 0;
+              min-width: 0;
+          }
+          &__right {
+              text-align: center;
+              margin-top: 30px;
+          }
+          &__text {
+              & ul {
+                  text-align: left;
+              }
+          }
+      }
+  }
+  
+  @media screen and (max-width: 960px) {
+      .popup {
+          &__down {
+              flex-direction: column;
+              align-items: center;
+          }
+          &__right-block {
+              margin-right: 0;
+              margin-bottom: 30px;
+          }
+          &__right {
+              max-width: 800px;
+          }
+      }
+  }
+  
+  @media screen and (max-width: 600px) {
+      .popup__title {
+          margin: 10px 0;
+          line-height: 110%;
+      }
+  }
+  
+  @media screen and (max-width: 550px) {
+      .appartment-block__right-block {
+          flex-wrap: wrap;
+      }
+      .popup {
+          &__buttons {
+              flex-direction: column;
+              align-items: center;
+          }
+          &__button {
+              &:first-child {
+                  margin-right: 0;
+              }
+          }
+          &__right-block,
+          &__right {
+              min-width: 0;
+          }
+          &__slider-under {
+              min-height: 0;
+          }
+      }
+  }
+  
+  @media screen and (max-width: 400px) {
+      .popup__title {
+          font-size: 33px;
+          margin-top: 30px;
+      }
+      .popup__content {
+          padding: 5px;
+      }
+      .popup__slider-img:not(:last-child) {
+          margin-right: 7px;
+      }
+      .popup__button {
+          padding: 20px 0;
+          width: 100%;
+      }
+  }
+  
+  @media screen and (max-width: 992px) {
+      .img-fluid {
+          padding: 5px;
       }
   }
